@@ -11,52 +11,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const path = window.location.pathname;
 
-    // Определяем базовый путь (для GitHub Pages)
+    // Получаем все сегменты пути
     const pathSegments = path.split('/').filter(seg => seg !== '');
 
-    // Если первый сегмент — это имя репозитория, отбрасываем его
-    // Предполагаем, что репозиторий называется "zona----------2-"
-    let currentPage = '';
-    if (pathSegments.length > 0 && pathSegments[0] === 'zona----------2-') {
-        // Это GitHub Pages, убираем имя репозитория
-        currentPage = pathSegments.slice(1).join('/');
-        // Если после удаления репозитория путь пустой или это index.html
-        if (currentPage === '' || currentPage === 'index.html') {
-            currentPage = 'index.html';
-        } else {
-            // Для других страниц добавляем префикс pages/
-            currentPage = 'pages/' + currentPage;
-        }
-    } else {
-        // Локальная разработка или корневой домен
-        currentPage = path.replace(/^\/+/, '').toLowerCase();
-        if (currentPage === '' || currentPage === 'index.html') {
-            currentPage = 'index.html';
-        } else if (!currentPage.startsWith('pages/')) {
-            currentPage = 'pages/' + currentPage;
+    // Ищем имя файла (последний сегмент, который заканчивается на .html)
+    let fileName = '';
+    for (let i = pathSegments.length - 1; i >= 0; i--) {
+        if (pathSegments[i].endsWith('.html')) {
+            fileName = pathSegments[i];
+            break;
         }
     }
 
-    // 1. Убираем начальный слэш, приводим к нижнему регистру
+    // Если файл не найден, это корень или папка
+    let currentPage = fileName || 'index.html';
+
+    // 1. Приводим к нижнему регистру
     currentPage = currentPage.toLowerCase();
-
-    // 2. Если это корень сайта — считаем как index.html
-    if (currentPage === '' || currentPage === 'zona----------2-') {
-        currentPage = 'index.html';
-    }
-    // 3. Если путь заканчивается слэшем — убираем его
-    else if (currentPage.endsWith('/')) {
-        currentPage = currentPage.slice(0, -1);
-        if (currentPage === '') {
-            currentPage = 'index.html';
-        }
-    }
-
-    // 4. Если путь содержит папку (например, pages/news.html), извлекаем только имя файла
-    if (currentPage.includes('/')) {
-        const parts = currentPage.split('/');
-        currentPage = parts[parts.length - 1];
-    }
 
     switch (currentPage) {
         case 'index.html':
