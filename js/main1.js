@@ -7,7 +7,24 @@ import { Header } from './components/Header.js';
 import { Footer } from './components/Footer.js';
 
 document.addEventListener('DOMContentLoaded', function () {
-    const currentPage = window.location.pathname.split('/').pop();
+    // const currentPage = window.location.pathname.split('/').pop();
+
+    const path = window.location.pathname;
+
+    // 1. Убираем начальный слэш, приводим к нижнему регистру
+    let currentPage = path.replace(/^\/+/, '').toLowerCase();
+
+    // 2. Если это корень сайта — считаем как index.html
+    if (currentPage === '' || currentPage === 'zona----------2-') {
+        currentPage = 'index.html';
+    }
+    // 3. Если путь заканчивается слэшем — убираем его
+    else if (currentPage.endsWith('/')) {
+        currentPage = currentPage.slice(0, -1);
+        if (currentPage === '') {
+            currentPage = 'index.html';
+        }
+    }
 
     switch (currentPage) {
         case 'index.html':
