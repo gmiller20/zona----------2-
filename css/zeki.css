@@ -5,6 +5,7 @@
     gap: 28px;
     padding-bottom: 50px;
     justify-items: center;
+    min-height: 1000px;
 }
 
 /* ensure cards in the grid rows share equal height */
@@ -21,7 +22,7 @@
     box-shadow: 0 14px 40px rgba(0, 0, 0, 0.22);
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 6px;
     width: 100%;
     max-width: 360px;
 }
@@ -47,7 +48,6 @@
 .zeki-name {
     font-size: 1.15rem;
     font-weight: 700;
-    margin-bottom: 6px;
     color: #ffffff;
 }
 
@@ -75,6 +75,12 @@
 }
 
 @media (max-width: 640px) {
+    .zeki-container {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        min-height: auto;
+    }
+
     .zeki-img {
         height: 350px;
     }
@@ -84,7 +90,131 @@
     }
 
     .zeki-title {
-
         margin-top: 50px;
     }
+
+    .flip-card {
+        height: 500px;
+        max-width: 360px;
+        width: 100%;
+    }
+
+    .flip-card-inner {
+        height: 100%;
+    }
+
+    .flip-card-front .zeki-img {
+        height: 320px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .flip-card-back {
+        padding: 20px;
+        font-size: 13px;
+    }
+
+    .flip-card-back h3 {
+        font-size: 18px;
+    }
+
+    .flip-card-back p {
+        font-size: 13px;
+        margin: 5px 0;
+    }
+
+    .flip-card-back .flip-card-badge {
+        font-size: 12px;
+        padding: 4px 12px;
+    }
+}
+
+/* ==================== Flip Cards ==================== */
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    max-width: 360px;
+    height: 440px;
+    perspective: 1000px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+/* Передняя сторона — используем существующие стили .zeki-card */
+.flip-card-front {
+    transform: rotateY(0deg);
+}
+
+.flip-card-front .zeki-card {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+/* Задняя сторона — новые стили */
+.flip-card-back {
+    transform: rotateY(180deg);
+    background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.22);
+}
+
+.flip-card-back h3 {
+    color: #ff6b6b;
+    font-weight: 800;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+    padding-bottom: 8px;
+}
+
+.flip-card-back p {
+    color: #ddd;
+    font-size: 13px;
+    margin: 5px 0;
+    line-height: 1.4;
+}
+
+.flip-card-back p strong {
+    color: #ff6b6b;
+}
+
+.flip-card-badge {
+    display: inline-block;
+    background: #ff4444;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    align-self: center;
 }

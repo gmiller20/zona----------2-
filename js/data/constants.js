@@ -76,25 +76,41 @@ export const zeki = [
         id: 1,
         name: 'Аслиддин Нурматов',
         position: 'Главный опущенный',
-        img: '../img/news/asliddin.jpg'
+        img: '../img/news/asliddin.jpg',
+        nickname: 'Ослоебин',
+        article: '228. Пидорство',
+        sentence: 'Пожизненное',
+        achievements: 'Купил экзамен. Не вернул долг. Считает жену товарища Курочко толстой'
     },
     {
         id: 2,
         name: 'Владимир Леонов',
         position: 'Петух в пальте',
-        img: '../img/zeki/leonov.jpg'
+        img: '../img/zeki/leonov.jpg',
+        nickname: 'Поэээт',
+        article: '228. Пидорство',
+        sentence: '10 лет',
+        achievements: 'Самое модное пальто в пидорятне'
     },
     {
         id: 3,
         name: 'Александр Подорожко',
         position: 'Опущенный по своей воле',
-        img: '../img/zeki/podorojko.jpg'
+        img: '../img/zeki/podorojko.jpg',
+        nickname: 'Подорожник',
+        article: '228. Пидорство',
+        sentence: '5 лет',
+        achievements: 'Добровольно сдался в пидорятню'
     },
     {
         id: 4,
         name: 'Мохаммед Карам',
         position: 'Опущенный по местным традициям',
-        img: '../img/zeki/mohammed.jpg'
+        img: '../img/zeki/mohammed.jpg',
+        nickname: 'Хам',
+        article: '228. Пидорство',
+        sentence: '10 лет',
+        achievements: 'Товарищи из Египта засовывали ему пальцы в жопу столько раз, сколько исполниось лет'
     }
 ];
 
