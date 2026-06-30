@@ -62,6 +62,12 @@ export const employees = [
         name: 'Тетя Рита',
         position: 'Повариха',
         img: '../img/employee/rita.jpg'
+    },
+    {
+        id: 11,
+        name: 'Жоау Мануэл Мигель',
+        position: 'Министр иностранных дел',
+        img: '../img/employee/migel.jpg'
     }
 ];
 
@@ -83,6 +89,12 @@ export const zeki = [
         name: 'Александр Подорожко',
         position: 'Опущенный по своей воле',
         img: '../img/zeki/podorojko.jpg'
+    },
+    {
+        id: 4,
+        name: 'Мохаммед Карам',
+        position: 'Опущенный по местным традициям',
+        img: '../img/zeki/mohammed.jpg'
     }
 ];
 
