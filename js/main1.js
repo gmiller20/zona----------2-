@@ -40,6 +40,12 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // 4. Если путь содержит папку (например, pages/news.html), извлекаем только имя файла
+    if (currentPage.includes('/')) {
+        const parts = currentPage.split('/');
+        currentPage = parts[parts.length - 1];
+    }
+
     switch (currentPage) {
         case 'index.html':
             const homePage = new HomePage();
