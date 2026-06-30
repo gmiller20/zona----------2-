@@ -107,7 +107,7 @@ export const zeki = [
         name: 'Мохаммед Карам',
         position: 'Опущенный по местным традициям',
         img: '../img/zeki/mohammed.jpg',
-        nickname: 'Хам',
+        nickname: 'Мохаммед',
         article: '228. Пидорство',
         sentence: '10 лет',
         achievements: 'Товарищи из Египта засовывали ему пальцы в жопу столько раз, сколько исполниось лет'
