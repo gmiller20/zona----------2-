@@ -20,9 +20,21 @@ document.addEventListener('DOMContentLoaded', function () {
     if (pathSegments.length > 0 && pathSegments[0] === 'zona----------2-') {
         // Это GitHub Pages, убираем имя репозитория
         currentPage = pathSegments.slice(1).join('/');
+        // Если после удаления репозитория путь пустой или это index.html
+        if (currentPage === '' || currentPage === 'index.html') {
+            currentPage = 'index.html';
+        } else {
+            // Для других страниц добавляем префикс pages/
+            currentPage = 'pages/' + currentPage;
+        }
     } else {
         // Локальная разработка или корневой домен
         currentPage = path.replace(/^\/+/, '').toLowerCase();
+        if (currentPage === '' || currentPage === 'index.html') {
+            currentPage = 'index.html';
+        } else if (!currentPage.startsWith('pages/')) {
+            currentPage = 'pages/' + currentPage;
+        }
     }
 
     // 1. Убираем начальный слэш, приводим к нижнему регистру
