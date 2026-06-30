@@ -12,7 +12,7 @@ export class Header {
     render() {
         this.container.innerHTML = `
                 <div class="header-row">
-                    <a href="/index.html">
+                    <a href="../index.html">
                         <div class="header-title">
                             <div class="header-title-img">
                                 <img src="../img/logo.svg" alt="Logo">
