@@ -15,7 +15,7 @@ export class Header {
                     <a href="/index.html">
                         <div class="header-title">
                             <div class="header-title-img">
-                                <img src="/img/logo.svg" alt="Logo">
+                                <img src="./img/logo.svg" alt="Logo">
                             </div>
                             <div class="header-title-text">Зона.com</div>
                         </div>
