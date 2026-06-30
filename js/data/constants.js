@@ -7,61 +7,61 @@ export const employees = [
         id: 1,
         name: 'Курочко Армен Петрович',
         position: 'Начальник зоны',
-        img: '/img/employee/arthur.jpg'
+        img: '../img/employee/arthur.jpg'
     },
     {
         id: 2,
         name: 'Поповидзе Вячеслав Дмитриевич',
         position: 'Заведующий пидорятней',
-        img: '/img/employee/popov.jpg'
+        img: '../img/employee/popov.jpg'
     },
     {
         id: 3,
         name: 'Блатной Алексей Сергеевич',
         position: 'Начальник охраны',
-        img: '/img/employee/leha.jpg'
+        img: '../img/employee/leha.jpg'
     },
     {
         id: 4,
         name: 'Лебедев Иван Дмитриевич',
         position: 'Оперативный отдел',
-        img: '/img/employee/vano.jpg'
+        img: '../img/employee/vano.jpg'
     },
     {
         id: 5,
         name: 'Миллер Герман Викторович',
         position: 'IT-отдел',
-        img: '/img/employee/german.jpg'
+        img: '../img/employee/german.jpg'
     },
     {
         id: 6,
         name: 'Кобяков Алексей Максимович',
         position: 'Старший офицер',
-        img: '/img/employee/leha-ko.jpg'
+        img: '../img/employee/leha-ko.jpg'
     },
     {
         id: 7,
         name: 'Таборин Данила',
         position: 'Старший офицер',
-        img: '/img/employee/taborin.jpg'
+        img: '../img/employee/taborin.jpg'
     },
     {
         id: 8,
         name: 'Курочко Тина',
         position: 'Глав-врач',
-        img: '/img/employee/tina.jpg'
+        img: '../img/employee/tina.jpg'
     },
     {
         id: 9,
         name: 'Реутов Сергей Сергеевич',
         position: 'Бывший начальник зоны (ныне груз-200)',
-        img: '/img/employee/reutov.jpg'
+        img: '../img/employee/reutov.jpg'
     },
     {
         id: 10,
         name: 'Тетя Рита',
         position: 'Повариха',
-        img: '/img/employee/rita.jpg'
+        img: '../img/employee/rita.jpg'
     }
 ];
 
@@ -70,26 +70,26 @@ export const zeki = [
         id: 1,
         name: 'Аслиддин Нурматов',
         position: 'Главный опущенный',
-        img: '/img/news/asliddin.jpg'
+        img: '../img/news/asliddin.jpg'
     },
     {
         id: 2,
         name: 'Владимир Леонов',
         position: 'Петух в пальте',
-        img: '/img/zeki/leonov.jpg'
+        img: '../img/zeki/leonov.jpg'
     },
     {
         id: 3,
         name: 'Александр Подорожко',
         position: 'Опущенный по своей воле',
-        img: '/img/zeki/podorojko.jpg'
+        img: '../img/zeki/podorojko.jpg'
     }
 ];
 
 export const news = [
     {
         id: 1,
-        img: '../../img/news/asliddin.jpg',
+        img: '../img/news/asliddin.jpg',
         date: '04-06-2026',
         title: 'ЭКСТРЕННЫЙ ВЫПУСК: «БИОХИМИЯ — ХУЙНЯ», ИЛИ ХРОНИКА ПИКИРУЮЩЕГО СТУДЕНТА',
         HTMLcontent: `<p>
@@ -138,7 +138,7 @@ export const news = [
 
     {
         id: 2,
-        img: '../../img/news/jinka.jpg',
+        img: '../img/news/jinka.jpg',
         date: '20-07-2026',
         title: 'РЫБАЦКИЙ ДЕТЕКТИВ: «ЖИНКА УМЕРЛА!», ИЛИ СХВАТКА ЧЕСТИ НА БЕРЕГУ',
         HTMLcontent: `<p>
