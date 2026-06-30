@@ -12,7 +12,7 @@ export class Header {
     render() {
         this.container.innerHTML = `
                 <div class="header-row">
-                    <a href="../index.html">
+                    <a href="/zona----------2-/">
                         <div class="header-title">
                             <div class="header-title-img">
                                 <img src="../img/logo.svg" alt="Logo">
@@ -23,14 +23,14 @@ export class Header {
                     <nav class="header-nav">
                         <ul>
                             ${this.menuItems.map(item => {
-                                return `
+            return `
                                     <li>
                                         <a href="${item.link}">
                                             ${item.name}
                                         </a>
                                     </li>
                                 `;
-                            }).join('')}
+        }).join('')}
                         </ul>
                     </nav>
                     <a href="./form.html" class="header-btn btn">Сесть</a>
