@@ -1,0 +1,433 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    line-height: 1.65;
+    font-weight: 500;
+    color: #f5f5f5;
+    background: radial-gradient(circle at top, #2f2f2f 0%, #161616 55%, #070707 100%);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+/* HEADER */
+
+.header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.588), rgba(0, 0, 0, 0.533)), url('https://avatars.mds.yandex.net/i?id=0052e445985fc581bc419fad2e27805e_l-5161061-images-thumbs&n=13');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* min-height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header-h {
+    min-height: 100vh;
+}
+
+.header-row {
+    width: min(1160px, 90%);
+    margin: 0 auto;
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.header-title {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.header-title-img {
+    width: 48px;
+}
+
+.header-title-text {
+    font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+}
+
+.header-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.header-nav a {
+    color: #f5f5f5;
+    font-weight: 600;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.header-nav a:hover {
+    color: #ffd85f;
+    transform: translateY(-3px);
+}
+
+.header-btn {
+    display: inline-flex;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 22px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    font-weight: 700;
+    transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.btn:hover {
+    background-color: rgba(255, 216, 95, 0.18);
+    border-color: rgba(255, 216, 95, 0.35);
+    transform: translateY(-2px);
+}
+
+/* MAIN */
+
+.container {
+    width: min(1160px, 90%);
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: minmax(280px, 1fr) minmax(320px, 1.2fr);
+    gap: 32px;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.555);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 32px;
+    padding: 42px;
+    box-shadow: 0 28px 80px rgba(0, 0, 0, 0.28);
+    /* backdrop-filter: blur(12px); */
+    overflow: visible;
+}
+
+.card-title {
+    margin: 0;
+    font-size: clamp(2.6rem, 5.2vw, 4.4rem);
+    line-height: 1.08;
+    font-weight: 800;
+    position: relative;
+    z-index: 3;
+    padding-bottom: 6px;
+    background: linear-gradient(120deg, #ffffff, #ffd75f 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: block;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+/* Гимн зоны */
+.gimn-container {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 18px;
+}
+
+.gimn-title {
+    font-size: clamp(1rem, 1.6vw, 1.2rem);
+    font-weight: 800;
+    color: #fff;
+    background: linear-gradient(120deg, #ffffff, #ffd75f 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gimn-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 340px;
+    max-width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 215, 95, 0.12);
+    border-radius: 12px;
+    padding: 10px 14px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+    min-height: 56px;
+    z-index: 4;
+}
+
+.gimn {
+    width: 100%;
+    height: 44px;
+    display: block;
+}
+
+/* small tweaks for WebKit controls (Firefox ignores) */
+audio.gimn::-webkit-media-controls-panel {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+}
+
+@media (max-width: 700px) {
+    .gimn-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        margin-top: 14px;
+    }
+
+    .gimn-wrap {
+        width: 100%;
+    }
+
+    .gimn-title {
+        font-size: 1rem;
+    }
+}
+
+.video-container {
+    position: relative;
+    border-radius: 28px;
+    overflow: hidden;
+    min-height: 280px;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.26);
+    z-index: 1;
+}
+
+.video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.32);
+}
+
+.overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 160ms ease, visibility 160ms ease;
+}
+
+.video-button {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.video-button:hover {
+    background: rgba(255, 255, 255, 0.22);
+    transform: scale(1.05);
+}
+
+.btn-icon {
+    width: 40px;
+    height: auto;
+    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.35));
+}
+
+.bio-title {
+    font-size: clamp(3rem, 4vw, 4.4rem);
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 24px;
+    background: linear-gradient(120deg, #ffffff, #ffd75f 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bio-text {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 28px;
+    padding: 32px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.22);
+    color: #e8e8e8;
+}
+
+.bio-text h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #fff;
+}
+
+.bio-text p {
+    margin: 0 0 24px;
+    text-align: justify;
+}
+
+.bio-text p:last-child {
+    margin-bottom: 0;
+}
+
+.bio-text ol {
+    padding-left: 30px;
+    margin: 0 0 24px;
+}
+
+.bio-text li {
+    margin-bottom: 16px;
+}
+
+.text-img {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+}
+
+.text-img p {
+    flex: 1 1 320px;
+}
+
+.bio-img-container {
+    flex: 0 0 340px;
+}
+
+.bio-img {
+    width: 100%;
+    height: auto;
+    border-radius: 28px;
+    object-fit: cover;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.26);
+}
+
+.footer {
+    text-align: center;
+    color: #dadada;
+    padding: 30px 0;
+    font-size: 0.95rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 960px) {
+    .card {
+        grid-template-columns: 1fr;
+        padding: 32px;
+    }
+
+    .video-container {
+        min-height: 260px;
+    }
+}
+
+@media (max-width: 700px) {
+    .header-nav ul {
+        gap: 18px;
+        justify-content: center;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    /* Ensure header button stretches full width on all pages and markup variants */
+    .header-row {
+        align-items: center;
+    }
+
+    .header-row .header-btn {
+        flex-basis: 100%;
+        width: 100%;
+        display: block;
+        margin-top: 12px;
+    }
+
+    .header-row .header-btn .btn,
+    .header-row a.btn {
+        width: 100% !important;
+        display: inline-flex;
+        justify-content: center;
+    }
+
+    .text-img {
+        flex-direction: column;
+    }
+
+    .bio-img-container {
+        width: 100%;
+    }
+
+    .video-container {
+        min-height: 220px;
+        border-radius: 22px;
+    }
+
+    .video-button {
+        width: 64px;
+        height: 64px;
+    }
+
+    .btn-icon {
+        width: 28px;
+    }
+}
+
+.card-left {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+@media (max-width: 960px) {
+    .card-left {
+        align-items: stretch;
+    }
+}
