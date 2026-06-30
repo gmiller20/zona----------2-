@@ -11,8 +11,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const path = window.location.pathname;
 
+    // Определяем базовый путь (для GitHub Pages)
+    const pathSegments = path.split('/').filter(seg => seg !== '');
+
+    // Если первый сегмент — это имя репозитория, отбрасываем его
+    // Предполагаем, что репозиторий называется "zona----------2-"
+    let currentPage = '';
+    if (pathSegments.length > 0 && pathSegments[0] === 'zona----------2-') {
+        // Это GitHub Pages, убираем имя репозитория
+        currentPage = pathSegments.slice(1).join('/');
+    } else {
+        // Локальная разработка или корневой домен
+        currentPage = path.replace(/^\/+/, '').toLowerCase();
+    }
+
     // 1. Убираем начальный слэш, приводим к нижнему регистру
-    let currentPage = path.replace(/^\/+/, '').toLowerCase();
+    currentPage = currentPage.toLowerCase();
 
     // 2. Если это корень сайта — считаем как index.html
     if (currentPage === '' || currentPage === 'zona----------2-') {
