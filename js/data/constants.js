@@ -73,7 +73,7 @@ export const employees = [
         id: 12,
         name: 'Костоусов Вадим',
         position: 'Начальник столовой',
-        img: '../img/employee/vaidm.jpg'
+        img: '../img/employee/vadim.jpg'
     }
 ];
 
