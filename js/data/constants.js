@@ -127,6 +127,16 @@ export const zeki = [
         article: '228. Пидорство',
         sentence: '1 год',
         achievements: 'В рот ебал наш день города. Гуляет с сестрой. «Редко ездим в баню».'
+    },
+    {
+        id: 6,
+        name: 'Эйхман Кирилл',
+        position: 'Лысый пидор',
+        img: '../img/zeki/eihman.jpg',
+        nickname: 'Эйхман',
+        article: '228. Пидорство',
+        sentence: '5 лет',
+        achievements: 'Выебал преподшу. Не вернул долг'
     }
 ];
 
