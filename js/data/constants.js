@@ -35,15 +35,15 @@ export const employees = [
     },
     {
         id: 6,
-        name: 'Кобяков Алексей Максимович',
-        position: 'Старший офицер',
-        img: '../img/employee/leha-ko.jpg'
-    },
-    {
-        id: 7,
         name: 'Таборин Данила',
         position: 'Старший офицер',
         img: '../img/employee/taborin.jpg'
+    },
+    {
+        id: 7,
+        name: 'Тихонов Иван',
+        position: 'Выпускник академии ДК',
+        img: '../img/employee/tihon.jpg'
     },
     {
         id: 8,
@@ -68,6 +68,12 @@ export const employees = [
         name: 'Жоау Мануэл Мигель',
         position: 'Министр иностранных дел',
         img: '../img/employee/migel.jpg'
+    },
+    {
+        id: 12,
+        name: 'Костоусов Вадим',
+        position: 'Начальник столовой',
+        img: '../img/employee/vaidm.jpg'
     }
 ];
 
@@ -111,6 +117,16 @@ export const zeki = [
         article: '228. Пидорство',
         sentence: '10 лет',
         achievements: 'Товарищи из Египта засовывали ему пальцы в жопу столько раз, сколько исполниось лет'
+    },
+    {
+        id: 5,
+        name: 'Алексей Кобяков',
+        position: 'Предатель ДК',
+        img: '../img/zeki/leha-ko.jpg',
+        nickname: 'Настоящий друг',
+        article: '228. Пидорство',
+        sentence: '1 год',
+        achievements: 'В рот ебал наш день города. Гуляет с сестрой. «Редко ездим в баню».'
     }
 ];
 
